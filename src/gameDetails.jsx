@@ -1,0 +1,16 @@
+function GameDetails({ game, onClose }) {
+  return (
+    <div style={{ marginTop: "30px", padding: "20px", border: "1px solid #ccc", borderRadius: "8px" }}>
+      <h2>{game.title}</h2>
+      <img src={game.thumbnail} alt={game.title} width="300" style={{ marginBottom: "15px" }} />
+      <p><strong>Description :</strong> {game.short_description || game.description}</p>
+      <p>
+        <strong>Lien officiel : </strong>
+        <a href={game.game_url} target="_blank" rel="noopener noreferrer">Jouer ici</a>
+      </p>
+      <button onClick={onClose} style={{ marginTop: "10px", padding: "6px 12px" }}>Fermer</button>
+    </div>
+  );
+}
+
+export default GameDetails;
